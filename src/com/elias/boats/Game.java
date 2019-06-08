@@ -21,27 +21,34 @@ public class Game implements Runnable {
     public String title;
     public int fps = 60;
 
+    //States
     private State gamestate;
     private State menuState;
 
+    //Input
+    private KeyManager keyManager;
 
     public Game(String title, int width, int heigth) {
         this.width = width;
         this.height = heigth;
         this.title = title;
+        keyManager = new KeyManager();
 
     }
 
     public void init() {
         display = new Display(title, width, height);
+        display.getFrame().addKeyListener(keyManager);
         Assets.init();
 
-        gamestate = new GameState();
-        menuState = new MenuState();
+        gamestate = new GameState(this);
+        menuState = new MenuState(this);
         State.setState(gamestate);
     }
 
     public void tick() {
+        keyManager.tick();
+
         if (State.getState() != null) {
             State.getState().tick();
         }
@@ -102,6 +109,10 @@ public class Game implements Runnable {
         g.dispose();
 
 
+    }
+
+    public KeyManager getKeyManager() {
+        return keyManager;
     }
 
     public synchronized void start() {

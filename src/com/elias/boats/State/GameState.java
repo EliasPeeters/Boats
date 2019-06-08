@@ -2,6 +2,7 @@ package com.elias.boats.State;
 
 
 import com.elias.boats.Assets;
+import com.elias.boats.Game;
 import com.elias.boats.entities.creatures.Player;
 
 import java.awt.*;
@@ -10,8 +11,9 @@ public class GameState extends State{
 
     private Player player;
 
-    public GameState() {
-        player = new Player(100, 100);
+    public GameState(Game game) {
+        super(game);
+        player = new Player(game,100, 100);
     }
 
     public void tick() {

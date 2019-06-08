@@ -1,5 +1,7 @@
 package com.elias.boats.State;
 
+import com.elias.boats.Game;
+
 import java.awt.*;
 
 public abstract class State {
@@ -13,6 +15,12 @@ public abstract class State {
 
     public static State getState() {
         return currentState;
+    }
+
+    protected Game game;
+
+    public State(Game game) {
+        this.game = game;
     }
 
 
