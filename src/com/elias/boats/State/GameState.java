@@ -2,20 +2,24 @@ package com.elias.boats.State;
 
 
 import com.elias.boats.Assets;
+import com.elias.boats.entities.creatures.Player;
 
 import java.awt.*;
 
 public class GameState extends State{
 
-    public GameState() {
+    private Player player;
 
+    public GameState() {
+        player = new Player(100, 100);
     }
 
     public void tick() {
-
+        player.tick();
     }
 
     public void render(Graphics g) {
-        g.drawImage(Assets.playerStanding, 0, 0, null);
+        player.render(g);
+        //g.drawImage(Assets.playerStanding, 0, 0, null);
     }
 }
