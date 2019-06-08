@@ -1,6 +1,7 @@
 package com.elias.boats;
 
 import com.elias.boats.State.GameState;
+import com.elias.boats.State.MenuState;
 import com.elias.boats.State.State;
 
 import java.awt.*;
@@ -21,7 +22,7 @@ public class Game implements Runnable {
     public int fps = 60;
 
     private State gamestate;
-
+    private State menuState;
 
 
     public Game(String title, int width, int heigth) {
@@ -36,6 +37,7 @@ public class Game implements Runnable {
         Assets.init();
 
         gamestate = new GameState();
+        menuState = new MenuState();
         State.setState(gamestate);
     }
 
@@ -89,14 +91,10 @@ public class Game implements Runnable {
         //clear Screen
         g.clearRect(0,0, width, height);
 
-        //draw on Canvas
-        g.setColor(new Color(100, 34, 23));
-        g.fillRect(100, 100, 100, 100);
-        g.drawImage(Assets.playerStanding, 200, 200, null);
-
+        //call the render function of the active state
 
         if (State.getState() != null) {
-            State.getState().tick();
+            State.getState().render(g);
         }
 
         //final
