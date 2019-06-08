@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9166e328-e78e-4291-86e5-7528eddd5c08" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/res/worlds/world1.world" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/elias/boats/tile/DirtTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/elias/boats/tile/RockTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/elias/boats/tile/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/elias/boats/tile/grassTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/elias/boats/worlds/World.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/worlds/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/elias/boats/Utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boats/com/elias/boats/Assets.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boats/com/elias/boats/Assets.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Boats/com/elias/boats/State/GameState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boats/com/elias/boats/State/GameState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/elias/boats/Assets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/elias/boats/Assets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boats/com/elias/boats/worlds/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boats/com/elias/boats/worlds/World.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/elias/boats/State/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/elias/boats/State/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/elias/boats/worlds/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/elias/boats/worlds/World.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,32 +23,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/elias/boats/entities/creatures/Creature.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/elias/boats/entities/creatures/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#813#814#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/elias/boats/Assets.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -64,8 +34,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/elias/boats/State/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/worlds/test.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/elias/boats/Utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/elias/boats/worlds/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="405">
+              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#144#145#0" expanded="true" />
@@ -87,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/worlds/world1.world">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <caret line="8" column="9" lean-forward="true" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -166,9 +157,11 @@
         <option value="$PROJECT_DIR$/src/com/elias/boats/tile/RockTile.java" />
         <option value="$PROJECT_DIR$/src/com/elias/boats/tile/DirtTile.java" />
         <option value="$PROJECT_DIR$/src/com/elias/boats/tile/Tile.java" />
-        <option value="$PROJECT_DIR$/src/com/elias/boats/State/GameState.java" />
-        <option value="$PROJECT_DIR$/src/com/elias/boats/worlds/World.java" />
         <option value="$PROJECT_DIR$/res/worlds/world1.world" />
+        <option value="$PROJECT_DIR$/src/com/elias/boats/Utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/com/elias/boats/worlds/World.java" />
+        <option value="$PROJECT_DIR$/src/com/elias/boats/State/GameState.java" />
+        <option value="$PROJECT_DIR$/res/worlds/test.txt" />
       </list>
     </option>
   </component>
@@ -249,6 +242,13 @@
               <item name="boats" type="462c0819:PsiDirectoryNode" />
               <item name="tile" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Boats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Boats" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="boats" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -311,12 +311,12 @@
       <option name="presentableId" value="Default" />
       <updated>1559986824180</updated>
       <workItem from="1559986827282" duration="9632000" />
-      <workItem from="1560016218775" duration="1936000" />
+      <workItem from="1560016218775" duration="2858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11568000" />
+    <option name="totallyTimeSpent" value="12490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="974" extended-state="6" />
@@ -534,10 +534,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/elias/boats/State/GameState.java">
+    <entry file="file://$PROJECT_DIR$/src/com/elias/boats/Utils/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="375">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -546,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/elias/boats/worlds/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="405">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#144#145#0" expanded="true" />
@@ -556,7 +556,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/elias/boats/State/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/worlds/world1.world">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" lean-forward="true" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/worlds/test.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
