@@ -1,5 +1,8 @@
 package com.elias.boats;
 
+import com.elias.boats.State.GameState;
+import com.elias.boats.State.State;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
@@ -17,6 +20,8 @@ public class Game implements Runnable {
     public String title;
     public int fps = 60;
 
+    private State gamestate;
+
 
 
     public Game(String title, int width, int heigth) {
@@ -28,10 +33,16 @@ public class Game implements Runnable {
 
     public void init() {
         display = new Display(title, width, height);
+        Assets.init();
+
+        gamestate = new GameState();
+        State.setState(gamestate);
     }
 
     public void tick() {
-
+        if (State.getState() != null) {
+            State.getState().tick();
+        }
     }
 
     public void run() {
@@ -81,6 +92,12 @@ public class Game implements Runnable {
         //draw on Canvas
         g.setColor(new Color(100, 34, 23));
         g.fillRect(100, 100, 100, 100);
+        g.drawImage(Assets.playerStanding, 200, 200, null);
+
+
+        if (State.getState() != null) {
+            State.getState().tick();
+        }
 
         //final
         bs.show();
