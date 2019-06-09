@@ -17,7 +17,7 @@ public class Game implements Runnable {
     private BufferStrategy bs;
     private Graphics g;
 
-    public int width, height;
+    private int width, height;
     public String title;
     public int fps = 60;
 
@@ -27,6 +27,9 @@ public class Game implements Runnable {
 
     //Input
     private KeyManager keyManager;
+
+    //Camera
+    private GameCamera gameCamera;
 
     public Game(String title, int width, int heigth) {
         this.width = width;
@@ -40,6 +43,8 @@ public class Game implements Runnable {
         display = new Display(title, width, height);
         display.getFrame().addKeyListener(keyManager);
         Assets.init();
+
+        gameCamera = new GameCamera(this,0,0);
 
         gamestate = new GameState(this);
         menuState = new MenuState(this);
@@ -114,6 +119,19 @@ public class Game implements Runnable {
     public KeyManager getKeyManager() {
         return keyManager;
     }
+
+    public GameCamera getGameCamera() {
+        return gameCamera;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
 
     public synchronized void start() {
         if (running)
