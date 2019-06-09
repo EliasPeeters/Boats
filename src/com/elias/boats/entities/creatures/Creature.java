@@ -3,6 +3,7 @@ package com.elias.boats.entities.creatures;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
 import com.elias.boats.entities.Entity;
+import com.elias.boats.tile.Tile;
 
 import java.awt.*;
 
@@ -26,10 +27,35 @@ public abstract class Creature extends Entity {
     }
 
     public void move() {
-        x += xMove;
+        moveY();
+        moveX();
+    }
+
+
+    public void moveX() {
+        if (xMove > 0) {
+            //Moving right
+
+            int tx = (int) (x + xMove + bounds.x + bounds.width) / Tile.TILE_WIDTH;
+            if (    !collisionWithTile(tx, (int) (y + bounds.y) / Tile.TILE_HEIGHT) &&
+                    !collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILE_HEIGHT)) {
+                x += xMove;
+            }
+
+        } else if (xMove < 0) {
+            //Moving left
+            x += xMove;
+
+        }
+    }
+
+    public void moveY() {
         y += yMove;
     }
 
+    protected boolean collisionWithTile(int x, int y) {
+        return handler.getWorld().getTile(x, y).isSolid();
+    }
 
     //Getter and Setter
     public float getxMove() {
