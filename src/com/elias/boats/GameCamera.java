@@ -8,7 +8,7 @@ public class GameCamera {
     private Game game;
 
     public GameCamera(Game game, float xOffset, float yOffset) {
-        this.yOffset = xOffset;
+        this.xOffset = xOffset;
         this.yOffset = yOffset;
         this.game = game;
     }
