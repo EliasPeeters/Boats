@@ -1,6 +1,7 @@
 package com.elias.boats.entities;
 
 import com.elias.boats.Game;
+import com.elias.boats.Handler;
 
 import java.awt.*;
 
@@ -8,14 +9,14 @@ public abstract class Entity {
 
     protected float x, y;
     protected int width, height;
-    protected Game game;
+    protected Handler handler;
 
-    public Entity(Game game, float x, float y, int width, int height) {
+    public Entity(Handler handler, float x, float y, int width, int height) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.game = game;
+        this.handler = handler;
     }
 
     public float getX() {

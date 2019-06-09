@@ -3,6 +3,7 @@ package com.elias.boats.State;
 
 import com.elias.boats.Assets;
 import com.elias.boats.Game;
+import com.elias.boats.Handler;
 import com.elias.boats.entities.creatures.Player;
 import com.elias.boats.tile.Tile;
 import com.elias.boats.worlds.World;
@@ -14,10 +15,13 @@ public class GameState extends State{
     private Player player;
     private World world;
 
-    public GameState(Game game) {
-        super(game);
-        player = new Player(game,100, 100);
-        world =  new World(game, "res/worlds/world1.world");
+    public GameState(Handler handler) {
+        super(handler);
+        world =  new World(handler, "res/worlds/world1.world");
+        handler.setWorld(world);
+
+        player = new Player(handler,100, 100);
+
 
     }
 

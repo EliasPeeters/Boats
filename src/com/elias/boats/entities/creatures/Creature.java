@@ -1,6 +1,7 @@
 package com.elias.boats.entities.creatures;
 
 import com.elias.boats.Game;
+import com.elias.boats.Handler;
 import com.elias.boats.entities.Entity;
 
 import java.awt.*;
@@ -16,8 +17,8 @@ public abstract class Creature extends Entity {
     public static final int DEFAULT_CREATURE_WIDTH = 64,
                             DEFAULT_CREATURE_HEIGHT = 64;
 
-    public Creature(Game game, float x, float y, int width, int height) {
-        super(game, x, y, width, height);
+    public Creature(Handler handler, float x, float y, int width, int height) {
+        super(handler, x, y, width, height);
         health = DEFAULT_HEALTH;
         speed = DEFAULT_SPEED;
         xMove = 0;

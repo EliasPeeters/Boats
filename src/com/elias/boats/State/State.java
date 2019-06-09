@@ -1,6 +1,7 @@
 package com.elias.boats.State;
 
 import com.elias.boats.Game;
+import com.elias.boats.Handler;
 
 import java.awt.*;
 
@@ -17,10 +18,10 @@ public abstract class State {
         return currentState;
     }
 
-    protected Game game;
+    protected Handler handler;
 
-    public State(Game game) {
-        this.game = game;
+    public State(Handler handler) {
+        this.handler = handler;
     }
 
 
