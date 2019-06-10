@@ -19,11 +19,19 @@ public class EntityManager {
     }
 
     public void tick() {
-        for (int i = 0; i < entities.size(); i++)
+        for (int i = 0; i < entities.size(); i++) {
+            Entity e = entities.get(i);
+            e.tick();
+        }
+
+        player.tick();
     }
 
     public void render(Graphics g) {
-
+        for (Entity e : entities) {
+            e.render(g);
+        }
+        player.render(g);
     }
 
     public void addEntity(Entity e) {

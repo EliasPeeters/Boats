@@ -3,6 +3,8 @@ package com.elias.boats.worlds;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
 import com.elias.boats.Utils.Utils;
+import com.elias.boats.entities.EntityManager;
+import com.elias.boats.entities.creatures.Player;
 import com.elias.boats.tile.Tile;
 
 import java.awt.*;
@@ -14,8 +16,14 @@ public class World {
     private int spawnX, spawnY;
     private int[][] tiles;
 
+    private EntityManager entityManager;
+
     public World(Handler handler, String path) {
+
+        entityManager = new EntityManager(handler,new Player(handler, 100, 100));
         loadWorld(path);
+        entityManager.getPlayer().setX(spawnX);
+        entityManager.getPlayer().setY(spawnY);
         this.handler = handler;
     }
 
@@ -49,7 +57,7 @@ public class World {
     }
 
     public void tick() {
-
+        entityManager.tick();
     }
 
     public void render(Graphics g) {
@@ -64,6 +72,7 @@ public class World {
                 getTile(x, y).render(g, (int) (x * Tile.TILE_WIDTH - handler.getGameCamera().getxOffset()), (int) (y * Tile.TILE_HEIGHT - handler.getGameCamera().getyOffset()));
             }
         }
+        entityManager.render(g);
 
     }
 
