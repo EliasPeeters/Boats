@@ -5,6 +5,7 @@ import com.elias.boats.Handler;
 import com.elias.boats.Utils.Utils;
 import com.elias.boats.entities.EntityManager;
 import com.elias.boats.entities.creatures.Player;
+import com.elias.boats.entities.statics.Harbour;
 import com.elias.boats.tile.Tile;
 
 import java.awt.*;
@@ -21,6 +22,7 @@ public class World {
     public World(Handler handler, String path) {
 
         entityManager = new EntityManager(handler,new Player(handler, 100, 100));
+        entityManager.addEntity(new Harbour(handler, 100, 100));
         loadWorld(path);
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);

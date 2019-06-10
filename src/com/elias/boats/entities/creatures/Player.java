@@ -12,7 +12,7 @@ public class Player extends Creature{
 
 
     //Animations
-    private Animation aniDown, animLeft, animRight,animUp;
+    private Animation aniDown,animUp;
 
     public Player(Handler handler, float x, float y) {
 
@@ -25,9 +25,7 @@ public class Player extends Creature{
 
         //Animations
         aniDown = new Animation(150, Assets.player_down);
-        animUp = new Animation(150, Assets.player_down);
-        animLeft = new Animation(150, Assets.player_down);
-        animRight = new Animation(150, Assets.player_down);
+        animUp = new Animation(150, Assets.player_up);
     }
 
     @Override
@@ -64,15 +62,15 @@ public class Player extends Creature{
 
     private BufferedImage getCurrentAnimationFrame() {
         if (xMove < 0) {
-            return aniDown.getCurrentFrame();
+            return animUp.getCurrentFrame();
         } else if (xMove > 0) {
-
+            return aniDown.getCurrentFrame();
         } else if  (yMove < 0) {
-
+            //return aniUpgetCurrentFrame();
         } else if (yMove > 0) {
 
         }
-        return aniDown.getCurrentFrame();
+        return Assets.playerStanding;
     }
 
 
