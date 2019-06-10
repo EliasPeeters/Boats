@@ -9,6 +9,9 @@ public class Tile {
     public static Tile grassTile = new grassTile(0);
     public static Tile dirtTile = new DirtTile(1);
     public static Tile rockTile = new RockTile(2);
+    public static Tile waterTLTile = new WaterTL(3);
+    public static Tile waterTTile = new WaterT(4);
+    public static Tile waterTile = new Water(5);
 
     public static final int TILE_WIDTH = 64, TILE_HEIGHT = 64;
 

@@ -15,7 +15,7 @@ public class Player extends Creature{
         bounds.x = 13 ;
         bounds.y = 32;
         bounds.width = 32;
-        bounds.height = 32;
+        bounds.height = 28;
     }
 
     @Override
@@ -43,8 +43,6 @@ public class Player extends Creature{
     public void render(Graphics g) {
         g.drawImage(Assets.playerStanding, (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
         g.setColor(Color.blue);
-        g.fillRect( (int) (x + bounds.x - handler.getGameCamera().getxOffset()),
-                    (int) (y + bounds.y - handler.getGameCamera().getyOffset()),
-                    bounds.width, bounds.height);
+        //g.fillRect( (int) (x + bounds.x - handler.getGameCamera().getxOffset()),(int) (y + bounds.y - handler.getGameCamera().getyOffset()),bounds.width, bounds.height);
     }
 }
