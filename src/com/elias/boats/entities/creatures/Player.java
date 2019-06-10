@@ -1,12 +1,18 @@
 package com.elias.boats.entities.creatures;
 
+import com.elias.boats.Animation;
 import com.elias.boats.Assets;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class Player extends Creature{
+
+
+    //Animations
+    private Animation aniDown, animLeft, animRight,animUp;
 
     public Player(Handler handler, float x, float y) {
 
@@ -16,10 +22,20 @@ public class Player extends Creature{
         bounds.y = 15;
         bounds.width = 32;
         bounds.height = 45;
+
+        //Animations
+        aniDown = new Animation(150, Assets.player_down);
+        animUp = new Animation(150, Assets.player_down);
+        animLeft = new Animation(150, Assets.player_down);
+        animRight = new Animation(150, Assets.player_down);
     }
 
     @Override
     public void tick() {
+        //Animations
+        aniDown.tick();
+
+        //Movement
         getInput();
         move();
         handler.getGameCamera().centerOnEntity(this);
@@ -41,8 +57,23 @@ public class Player extends Creature{
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Assets.playerStanding, (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
+        g.drawImage(getCurrentAnimationFrame(), (int) (x - handler.getGameCamera().getxOffset()), (int) (y - handler.getGameCamera().getyOffset()), width, height, null);
         g.setColor(Color.blue);
         //g.fillRect( (int) (x + bounds.x - handler.getGameCamera().getxOffset()),(int) (y + bounds.y - handler.getGameCamera().getyOffset()),bounds.width, bounds.height);
     }
+
+    private BufferedImage getCurrentAnimationFrame() {
+        if (xMove < 0) {
+            return aniDown.getCurrentFrame();
+        } else if (xMove > 0) {
+
+        } else if  (yMove < 0) {
+
+        } else if (yMove > 0) {
+
+        }
+        return aniDown.getCurrentFrame();
+    }
+
+
 }
