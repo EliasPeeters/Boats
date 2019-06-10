@@ -27,6 +27,8 @@ public class Assets {
         waterTL = world_textures.crop(width_world_textures,0, width_world_textures, height_world_textures);
         waterT = world_textures.crop(2 * width_world_textures,0, width_world_textures, height_world_textures);
         water = world_textures.crop(2 * width_world_textures, height_world_textures, width_world_textures, height_world_textures);
+        waterTR = world_textures.crop(3 * width_world_textures, 0, width_world_textures, height_world_textures);
+
 
         player_down = new BufferedImage[2];
 
