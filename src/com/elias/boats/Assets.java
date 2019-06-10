@@ -31,7 +31,7 @@ public class Assets {
         player_down = new BufferedImage[2];
 
         player_down[0] = playersheet.crop(0,0, width_player, height_player);
-        player_down[0] = playersheet.crop(width_player,0, width_player, height_player);
+        player_down[1] = playersheet.crop(width_player,0, width_player, height_player);
         playerStanding = playersheet.crop(2 * width_player,0, width_player, height_player);
     }
 }
