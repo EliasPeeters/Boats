@@ -19,7 +19,6 @@ public abstract class Entity {
         this.width = width;
         this.height = height;
         this.handler = handler;
-
         bounds = new Rectangle(0, 0, width, height);
     }
 
