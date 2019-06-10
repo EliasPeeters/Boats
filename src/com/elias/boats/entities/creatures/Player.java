@@ -12,10 +12,10 @@ public class Player extends Creature{
 
         super(handler, x, y, DEFAULT_CREATURE_WIDTH, DEFAULT_CREATURE_HEIGHT);
 
-        bounds.x = 13 ;
-        bounds.y = 32;
+        bounds.x = 16;
+        bounds.y = 15;
         bounds.width = 32;
-        bounds.height = 28;
+        bounds.height = 45;
     }
 
     @Override
