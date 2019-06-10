@@ -9,6 +9,7 @@ public class Assets {
 
     public static BufferedImage sand, playerStanding;
     public static BufferedImage[] player_down;
+    public static BufferedImage[] player_up;
 
 
     public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, harbour, waterT, waterB, waterCTL, waterCTR, waterCBL, waterCBR, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB;
@@ -55,7 +56,12 @@ public class Assets {
 
         player_down[0] = playersheet.crop(0,0, width_player, height_player);
         player_down[1] = playersheet.crop(width_player,0, width_player, height_player);
-        playerStanding = playersheet.crop(2 * width_player,0, width_player, height_player);
+        playerStanding = playersheet.crop(4 * width_player,0, width_player, height_player);
+
+        player_up = new BufferedImage[2];
+
+        player_up[0] = playersheet.crop(2 * width_player,0, width_player, height_player);
+        player_up[1] = playersheet.crop(3 * width_player,0, width_player, height_player);
 
 
     }
