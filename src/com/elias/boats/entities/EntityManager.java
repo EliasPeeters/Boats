@@ -19,7 +19,7 @@ public class EntityManager {
     }
 
     public void tick() {
-
+        for (int i = 0; i < entities.size(); i++)
     }
 
     public void render(Graphics g) {
@@ -27,7 +27,7 @@ public class EntityManager {
     }
 
     public void addEntity(Entity e) {
-            
+        entities.add(e);
     }
 
 
