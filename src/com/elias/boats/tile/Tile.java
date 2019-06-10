@@ -12,6 +12,10 @@ public class Tile {
     public static Tile waterTLTile = new WaterTL(3);
     public static Tile waterTTile = new WaterT(4);
     public static Tile waterTile = new Water(5);
+    public static Tile waterTRile = new WaterTR(6);
+    public static Tile waterTRTile = new WaterTR(7);
+
+
 
     public static final int TILE_WIDTH = 64, TILE_HEIGHT = 64;
 
