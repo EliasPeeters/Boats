@@ -19,8 +19,10 @@ public class EntityManager {
     }
 
     public void tick() {
-        for (int i = 0; i < entities.size(); i++)
-    }
+        for (int i = 0; i < entities.size(); i++){
+
+            }
+        }
 
     public void render(Graphics g) {
 
