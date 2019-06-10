@@ -27,8 +27,12 @@ public abstract class Creature extends Entity {
     }
 
     public void move() {
-        moveY();
-        moveX();
+        if (!checkEntityCollections(xMove, 0f)) {
+            moveX();
+        }
+        if (!checkEntityCollections(0, yMove)) {
+            moveY();
+        }
     }
 
 

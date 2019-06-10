@@ -29,6 +29,7 @@ public class Game implements Runnable {
 
     //Input
     private KeyManager keyManager;
+    private MouseManager mouseManager;
 
     //Camera
     private GameCamera gameCamera;
@@ -38,21 +39,28 @@ public class Game implements Runnable {
         this.height = height;
         this.title = title;
         keyManager = new KeyManager();
+        mouseManager = new MouseManager();
 
     }
 
     public void init() {
         display = new Display(title, width, height);
         display.getFrame().addKeyListener(keyManager);
+        display.getFrame().addMouseListener(mouseManager);
+        display.getFrame().addMouseMotionListener(mouseManager);
+        display.getCanvas().addMouseListener(mouseManager);
+        display.getCanvas().addMouseMotionListener(mouseManager);
+
         Assets.init();
 
         handler = new Handler(this);
         gameCamera = new GameCamera(handler,0,0);
 
 
+
         gamestate = new GameState(handler);
         menuState = new MenuState(handler);
-        State.setState(gamestate);
+        State.setState(menuState);
     }
 
     public void tick() {
@@ -122,6 +130,10 @@ public class Game implements Runnable {
 
     public KeyManager getKeyManager() {
         return keyManager;
+    }
+
+    public MouseManager getMouseManager() {
+        return mouseManager;
     }
 
     public GameCamera getGameCamera() {

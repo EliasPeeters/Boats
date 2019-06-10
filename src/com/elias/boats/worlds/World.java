@@ -22,7 +22,9 @@ public class World {
     public World(Handler handler, String path) {
 
         entityManager = new EntityManager(handler,new Player(handler, 100, 100));
+
         entityManager.addEntity(new Harbour(handler, 100, 100));
+
         loadWorld(path);
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);
@@ -44,6 +46,10 @@ public class World {
                 tiles[x][y] = Utils.parseInt(tokens[(x + y * width) + 4]);
             }
         }
+    }
+
+    public EntityManager getEntityManager() {
+        return entityManager;
     }
 
     public Tile getTile(int x, int y) {

@@ -4,6 +4,7 @@ import com.elias.boats.Game;
 import com.elias.boats.Handler;
 
 import java.awt.*;
+import java.util.Collections;
 
 public abstract class Entity {
 
@@ -20,6 +21,23 @@ public abstract class Entity {
         this.height = height;
         this.handler = handler;
         bounds = new Rectangle(0, 0, width, height);
+    }
+
+    public boolean checkEntityCollections (float xOffset, float yOffset) {
+        for (Entity e : handler.getWorld().getEntityManager().getEntities()) {
+            if (e.equals(this)) {
+                continue;
+            }
+            if (e.getCollisionBounds(0f, 0f).intersects(getCollisionBounds(xOffset, yOffset))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public Rectangle getCollisionBounds(float xOffset, float yOffset) {
+        return new Rectangle((int) (x + bounds.x + xOffset), (int) (y + bounds.y + yOffset), bounds.width, bounds.height);
     }
 
     public float getX() {
