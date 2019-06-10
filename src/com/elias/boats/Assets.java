@@ -10,7 +10,7 @@ public class Assets {
     public static BufferedImage sand, playerStanding;
     public static BufferedImage[] player_down;
 
-    public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, waterT, waterB;
+    public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, waterT, waterB, waterC, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB;
 
     public static void init() {
         SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/textures.png"));
