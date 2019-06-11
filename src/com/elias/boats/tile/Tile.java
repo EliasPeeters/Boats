@@ -30,8 +30,14 @@ public class Tile {
     public static Tile dirtBLTile = new DirtBL(31);
     public static Tile dirtBTile = new DirtB(32);
     public static Tile dirtBRTile = new DirtBR(33);
-
-
+    public static Tile bridgeTLTile = new BridgeTL(34);
+    public static Tile bridgeTRTile = new BridgeTR(35);
+    public static Tile bridgeBLTile = new BridgeBL(36);
+    public static Tile bridgeBRTile = new BridgeBR(37);
+    public static Tile dirtCTLTile = new DirtCTL(38);
+    public static Tile dirtCTRTile = new DirtCTR(39);
+    public static Tile dirtCBLTile = new DirtCBL(40);
+    public static Tile dirtCBRTile = new DirtCBR(41);
 
 
 

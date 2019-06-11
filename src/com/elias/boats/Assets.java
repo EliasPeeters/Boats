@@ -20,7 +20,7 @@ public class Assets {
 
     public static BufferedImage[] button, restartButton;
 
-    public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, harbour, waterT, waterB, waterCTL, waterCTR, waterCBL, waterCBR, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB;
+    public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, harbour, waterT, waterB, waterCTL, waterCTR, waterCBL, waterCBR, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB, bridgeTL, bridgeTR, bridgeBL, bridgeBR, dirtCTL, dirtCTR, dirtCBL, dirtCBR;
 
 
     public static void init() {
@@ -62,6 +62,14 @@ public class Assets {
         waterCTR = world_textures.crop(8 * width_world_textures,0, width_world_textures, height_world_textures);
         waterCBL = world_textures.crop(7 * width_world_textures,height_world_textures, width_world_textures, height_world_textures);
         waterCBR = world_textures.crop(8 * width_world_textures,height_world_textures, width_world_textures, height_world_textures);
+        bridgeTL = world_textures.crop(5 * width_world_textures, 3 * height_world_textures, width_world_textures, height_world_textures);
+        bridgeTR = world_textures.crop(6 * width_world_textures, 3 * height_world_textures, width_world_textures, height_world_textures);
+        bridgeBL = world_textures.crop(5 * width_world_textures, 4* height_world_textures, width_world_textures, height_world_textures);
+        bridgeBR = world_textures.crop(6 * width_world_textures, 4* height_world_textures, width_world_textures, height_world_textures);
+        dirtCTL = world_textures.crop(7 * width_world_textures,3 * height_world_textures, width_world_textures, height_world_textures);
+        dirtCTR = world_textures.crop(8 * width_world_textures,3 * height_world_textures, width_world_textures, height_world_textures);
+        dirtCBL = world_textures.crop(7 * width_world_textures,4 * height_world_textures, width_world_textures, height_world_textures);
+        dirtCBR = world_textures.crop(8 * width_world_textures,4 * height_world_textures, width_world_textures, height_world_textures);
 
         player_down = new BufferedImage[2];
 
