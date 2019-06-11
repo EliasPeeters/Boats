@@ -99,9 +99,14 @@ public class Player extends Creature{
         this.points = points;
     }
 
+    public void setTimeNeeded(int timeNeeded) {
+        this.timeNeeded = timeNeeded;
+    }
+
     public void incrementPoints() {
         points++;
-        if (points >= 4) {
+        if (points >= 1) {
+            timerRunning = false;
             State.setState(handler.getGame().getEndState());
         }
     }

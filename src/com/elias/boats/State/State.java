@@ -24,6 +24,10 @@ public abstract class State {
         this.handler = handler;
     }
 
+    public State getEndState() {
+        return handler.getGame().getEndState();
+    }
+
 
     public abstract void tick();
 
