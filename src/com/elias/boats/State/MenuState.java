@@ -15,12 +15,13 @@ public class MenuState extends State {
 
     @Override
     public void render(Graphics g) {
-        g.drawImage(Assets.playerStanding, 100, 100, null);
-
+        if (handler.getMouseManager().isLeftPressed() || handler.getMouseManager().isRightPressed()) {
+            State.setState(handler.getGame().getGamestate());
+        }
     }
 
     @Override
     public void tick() {
-
+        //System.out.println(handler.getMouseManager().getMouseX() + "  " + handler.getMouseManager().getMouseY());
     }
 }

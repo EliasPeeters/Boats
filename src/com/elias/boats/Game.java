@@ -56,8 +56,6 @@ public class Game implements Runnable {
         handler = new Handler(this);
         gameCamera = new GameCamera(handler,0,0);
 
-
-
         gamestate = new GameState(handler);
         menuState = new MenuState(handler);
         State.setState(menuState);
@@ -134,6 +132,14 @@ public class Game implements Runnable {
 
     public MouseManager getMouseManager() {
         return mouseManager;
+    }
+
+    public State getGamestate() {
+        return gamestate;
+    }
+
+    public State getMenuState() {
+        return menuState;
     }
 
     public GameCamera getGameCamera() {
