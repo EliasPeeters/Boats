@@ -4,10 +4,12 @@ package com.elias.boats.State;
 import com.elias.boats.Assets;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
+import com.elias.boats.Launcher;
 import com.elias.boats.entities.creatures.Player;
 import com.elias.boats.entities.statics.Harbour;
 import com.elias.boats.tile.Tile;
 import com.elias.boats.worlds.World;
+import com.sun.tools.javac.Main;
 
 import java.awt.*;
 
@@ -19,7 +21,7 @@ public class GameState extends State{
 
     public GameState(Handler handler) {
         super(handler);
-        world =  new World(handler, "res/worlds/world1.world");
+        world =  new World(handler, Launcher.class.getResource("res/worlds/world1.world").getPath());
         handler.setWorld(world);
 
     }

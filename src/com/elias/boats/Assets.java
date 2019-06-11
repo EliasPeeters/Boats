@@ -22,13 +22,13 @@ public class Assets {
 
 
     public static void init() {
-        font28 = FontLoader.loadFont("res/fonts/AXTON.otf", 28);
+        font28 = FontLoader.loadFont(Launcher.class.getResource("/res/fonts/AXTON.otf").getPath(), 28);
 
-        SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/textures.png"));
-        SpriteSheet ui = new SpriteSheet(ImageLoader.loadImage("/textures/UI.png"));
+        SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage(Launcher.class.getResource("/textures/textures.png").getPath()));
+        SpriteSheet ui = new SpriteSheet(ImageLoader.loadImage(Launcher.class.getResource("/textures/UI.png").getPath()));
 
-        SpriteSheet playersheet = new SpriteSheet(ImageLoader.loadImage("/textures/player_sheet.png"));
-        SpriteSheet world_textures = new SpriteSheet(ImageLoader.loadImage("/textures/world_textures.png"));
+        SpriteSheet playersheet = new SpriteSheet(ImageLoader.loadImage(Launcher.class.getResource("/textures/player_sheet.png").getPath()));
+        SpriteSheet world_textures = new SpriteSheet(ImageLoader.loadImage(Launcher.class.getResource("/textures/world_textures.png").getPath()));
 
 
         sand = sheet.crop(width,0, width, height);
@@ -84,7 +84,7 @@ public class Assets {
         uiDisplay = ui.crop(0,49, 190, 49);
         uiDisplaySmall = ui.crop(190, 49, 45, 49);
 
-        menuBackground = ImageLoader.loadImage("/textures/menu.png");
-        endScreen = ImageLoader.loadImage("/textures/end.png");
+        menuBackground = ImageLoader.loadImage(Launcher.class.getResource("/textures/menu.png").getPath());
+        endScreen = ImageLoader.loadImage(Launcher.class.getResource("/textures/end.png").getPath());
     }
 }

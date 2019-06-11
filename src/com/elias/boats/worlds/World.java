@@ -119,7 +119,7 @@ public class World {
 
         //Print Points
         Text.drawString(g, "Points: " , displayCenter + 90, handler.getHeight() - 37, true, Color.black, Assets.font28);
-        Text.drawString(g, " " + handler.getWorld().getPlayer().getPoints(), displayCenter + 150, handler.getHeight() - 37, true, Color.black, Assets.font28);
+        Text.drawString(g, " " + handler.getWorld().getPlayer().getPoints() + "/5", displayCenter + 150, handler.getHeight() - 37, true, Color.black, Assets.font28);
 
         Text.drawString(g, "" + handler.getGame().getFramesPerSecond() , handler.getWidth() - 32, 43, true, Color.black, Assets.font28);
     }
