@@ -101,7 +101,7 @@ public class Player extends Creature{
 
     public void incrementPoints() {
         points++;
-        if (points >= 1) {
+        if (points >= 4) {
             State.setState(handler.getGame().getEndState());
         }
     }

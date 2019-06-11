@@ -20,7 +20,7 @@ public class EndState extends State {
 
     @Override
     public void render(Graphics g) {
-        System.out.println("test");
+        //System.out.println("test");
     }
 
     @Override

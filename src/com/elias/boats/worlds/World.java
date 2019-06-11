@@ -12,6 +12,7 @@ import com.elias.boats.graphics.Text;
 import com.elias.boats.tile.Tile;
 
 import java.awt.*;
+import java.util.Random;
 
 public class World {
 
@@ -27,13 +28,25 @@ public class World {
 
         player = new Player(handler, 100, 100);
         entityManager = new EntityManager(handler, player);
-
-        entityManager.addEntity(new Harbour(handler, 100, 100));
+        generateEntities(4, handler);
+        entityManager.addEntity(new Harbour(handler, 200, 200));
+        //entityManager.addEntity(new Harbour(handler, 100, 100));
 
         loadWorld(path);
         entityManager.getPlayer().setX(spawnX);
         entityManager.getPlayer().setY(spawnY);
         this.handler = handler;
+    }
+
+    public void generateEntities(int amount, Handler handler) {
+        Random rand = new Random();
+
+        for (int i = 0; i < amount; i++) {
+            int xPos = rand.nextInt(50*64) + 20;
+            int yPos = rand.nextInt(50*64) + 20;
+
+            entityManager.addEntity(new Harbour(handler, xPos, yPos));
+        }
     }
 
     public Player getPlayer() {
