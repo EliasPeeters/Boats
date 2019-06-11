@@ -10,13 +10,13 @@ public class Assets {
     private static final int width_world_textures = 64, height_world_textures = 64;
     private static final int width_player = 64, height_player = 64;
 
-    public static BufferedImage sand, playerStanding, uiDisplay, uiDisplaySmall, menuBackground;
+    public static BufferedImage sand, playerStanding, uiDisplay, uiDisplaySmall, menuBackground, endScreen;
     public static BufferedImage[] player_down;
     public static BufferedImage[] player_up;
 
     public static Font font28;
 
-    public static BufferedImage[] button;
+    public static BufferedImage[] button, restartButton;
 
     public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, harbour, waterT, waterB, waterCTL, waterCTR, waterCBL, waterCBR, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB, bridgeTL, bridgeTR, bridgeBL, bridgeBR, dirtCTL, dirtCTR, dirtCBL, dirtCBR;
 
@@ -85,9 +85,14 @@ public class Assets {
         button[1] = ui.crop(190,0, 190, 49);
         button[0] = ui.crop(380,0, 190, 49);
 
+        restartButton = new BufferedImage[3];
+        restartButton[2] = ui.crop(0,98, 190, 49);
+        restartButton[0] = ui.crop(380,98, 190, 49);
+
         uiDisplay = ui.crop(0,49, 190, 49);
         uiDisplaySmall = ui.crop(190, 49, 45, 49);
 
         menuBackground = ImageLoader.loadImage("/textures/menu.png");
+        endScreen = ImageLoader.loadImage("/textures/end.png");
     }
 }

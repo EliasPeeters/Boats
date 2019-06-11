@@ -1,5 +1,7 @@
 package com.elias.boats;
 
+import com.elias.boats.State.MenuState;
+import com.elias.boats.State.State;
 import com.elias.boats.ui.UIManager;
 
 import java.awt.event.MouseEvent;
@@ -41,8 +43,6 @@ public class MouseManager implements MouseListener, MouseMotionListener {
     public void mouseMoved(MouseEvent e) {
         mouseX = e.getX();
         mouseY = e.getY();
-
-
         if (uiManager != null)
             uiManager.onMouseMove(e);
     }

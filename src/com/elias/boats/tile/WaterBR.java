@@ -7,6 +7,10 @@ public class WaterBR extends Tile {
     public WaterBR(int id) {
         super(Assets.waterBR, id);
     }
+    @Override
+    public boolean isSolid() {
+        return true;
+    }
 
 
 }

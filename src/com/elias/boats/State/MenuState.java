@@ -12,6 +12,7 @@ import java.awt.*;
 public class MenuState extends State {
 
     private UIManager uiManager;
+    private UIImageButton button;
 
     public MenuState(Handler handler) {
         super(handler);
@@ -37,6 +38,11 @@ public class MenuState extends State {
     @Override
     public void tick() {
         uiManager.tick();
+        if (handler.getMouseManager().isRightPressed() || handler.getMouseManager().isLeftPressed()) {
+            State.setState(handler.getGame().getGamestate());
+            handler.getMouseManager().setUiManager(null);
+            handler.getWorld().getPlayer().setTimerRunning(true);
+        }
         //System.out.println(handler.getMouseManager().getMouseX() + "  " + handler.getMouseManager().getMouseY());
     }
 }

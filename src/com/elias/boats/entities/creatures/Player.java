@@ -32,6 +32,8 @@ public class Player extends Creature{
         animUp = new Animation(150, Assets.player_up);
     }
 
+
+
     @Override
     public void tick() {
         if (timerRunning) {
@@ -87,6 +89,14 @@ public class Player extends Creature{
         return points;
     }
 
+    public void setXPos(int x) {
+        setX(x);
+    }
+
+    public void setYPos(int y) {
+        setY(y);
+    }
+
     public int getTimeNeeded() {
         return timeNeeded / 60;
     }
@@ -99,9 +109,14 @@ public class Player extends Creature{
         this.points = points;
     }
 
+    public void setTimeNeeded(int timeNeeded) {
+        this.timeNeeded = timeNeeded;
+    }
+
     public void incrementPoints() {
         points++;
-        if (points >= 4) {
+        if (points >= 5) {
+            timerRunning = false;
             State.setState(handler.getGame().getEndState());
         }
     }
