@@ -1,5 +1,6 @@
 package com.elias.boats;
 
+import com.elias.boats.State.EndState;
 import com.elias.boats.State.GameState;
 import com.elias.boats.State.MenuState;
 import com.elias.boats.State.State;
@@ -20,12 +21,14 @@ public class Game implements Runnable {
     private int width, height;
     public String title;
     public int fps = 60;
+    private int framesPerSecond;
 
     private Handler handler;
 
     //States
     private State gamestate;
     private State menuState;
+    private State endState;
 
     //Input
     private KeyManager keyManager;
@@ -56,9 +59,12 @@ public class Game implements Runnable {
         handler = new Handler(this);
         gameCamera = new GameCamera(handler,0,0);
 
+        endState = new EndState(handler);
         gamestate = new GameState(handler);
         menuState = new MenuState(handler);
-        State.setState(gamestate);
+
+        State.setState(menuState);
+
     }
 
     public void tick() {
@@ -95,6 +101,7 @@ public class Game implements Runnable {
 
             if (timer >= 1000000000) {
                 System.out.println("Ticks and Frames: " + ticks);
+                framesPerSecond = ticks;
                 ticks = 0;
                 timer = 0;
             }
@@ -126,7 +133,9 @@ public class Game implements Runnable {
 
     }
 
-
+    public int getFramesPerSecond() {
+        return framesPerSecond;
+    }
 
     public KeyManager getKeyManager() {
         return keyManager;
@@ -142,6 +151,10 @@ public class Game implements Runnable {
 
     public State getMenuState() {
         return menuState;
+    }
+
+    public State getEndState() {
+        return endState;
     }
 
     public GameCamera getGameCamera() {

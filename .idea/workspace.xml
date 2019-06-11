@@ -42,14 +42,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.66">
+    <splitter split-orientation="horizontal" split-proportion="0.528125">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/res/worlds/world1.world">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="19" column="146" selection-start-line="19" selection-start-column="146" selection-end-line="19" selection-end-column="146" />
+                <state relative-caret-position="697">
+                  <caret line="47" column="97" lean-forward="true" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
                 </state>
               </provider>
             </entry>
@@ -92,7 +92,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/elias/boats/tile/Tile.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
+                <state relative-caret-position="38">
                   <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -431,7 +431,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46186000" />
+    <option name="totallyTimeSpent" value="46527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -946,7 +946,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/elias/boats/tile/Tile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
+        <state relative-caret-position="38">
           <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -956,8 +956,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/worlds/world1.world">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="146" selection-start-line="19" selection-start-column="146" selection-end-line="19" selection-end-column="146" />
+        <state relative-caret-position="697">
+          <caret line="47" column="97" lean-forward="true" selection-start-line="47" selection-start-column="97" selection-end-line="47" selection-end-column="97" />
         </state>
       </provider>
     </entry>

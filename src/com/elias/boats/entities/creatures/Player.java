@@ -4,6 +4,7 @@ import com.elias.boats.Animation;
 import com.elias.boats.Assets;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
+import com.elias.boats.State.State;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -100,5 +101,8 @@ public class Player extends Creature{
 
     public void incrementPoints() {
         points++;
+        if (points >= 1) {
+            State.setState(handler.getGame().getEndState());
+        }
     }
 }

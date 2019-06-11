@@ -98,6 +98,7 @@ public class World {
         int displayCenter = handler.getWidth() / 2;
         g.drawImage(Assets.uiDisplay, displayCenter - 220, handler.getHeight() - 70, 190, 50, null);
         g.drawImage(Assets.uiDisplay, displayCenter + 30, handler.getHeight() - 70, 190, 50, null);
+        g.drawImage(Assets.uiDisplaySmall, handler.getWidth() - 55, 10, 45, 50, null);
 
         //Print Time
         Text.drawString(g, "Time: " , displayCenter - 170, handler.getHeight() - 37, true, Color.black, Assets.font28);
@@ -107,7 +108,7 @@ public class World {
         Text.drawString(g, "Points: " , displayCenter + 90, handler.getHeight() - 37, true, Color.black, Assets.font28);
         Text.drawString(g, " " + handler.getWorld().getPlayer().getPoints(), displayCenter + 150, handler.getHeight() - 37, true, Color.black, Assets.font28);
 
-
+        Text.drawString(g, "" + handler.getGame().getFramesPerSecond() , handler.getWidth() - 32, 43, true, Color.black, Assets.font28);
     }
 
     public int getWidth() {
