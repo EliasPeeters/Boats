@@ -28,8 +28,8 @@ public class World {
 
         player = new Player(handler, 100, 100);
         entityManager = new EntityManager(handler, player);
-        generateEntities(4, handler);
-        entityManager.addEntity(new Harbour(handler, 200, 200));
+        generateEntities(10, handler);
+        //entityManager.addEntity(new Harbour(handler, 200, 200));
         //entityManager.addEntity(new Harbour(handler, 100, 100));
 
         loadWorld(path);

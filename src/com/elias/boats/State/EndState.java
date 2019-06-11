@@ -43,7 +43,11 @@ public class EndState extends State {
         if (handler.getMouseManager().isRightPressed() || handler.getMouseManager().isLeftPressed()) {
             handler.getWorld().getPlayer().setPoints(0);
             handler.getWorld().getPlayer().setTimeNeeded(0);
-            State.setState(handler.getGame().getMenuState());
+            State.setState(handler.getGame().getGamestate());
+            handler.getWorld().getPlayer().setXPos(100);
+            handler.getWorld().getPlayer().setYPos(100);
+            handler.getWorld().generateEntities(5, handler);
+            handler.getWorld().getPlayer().setTimerRunning(true);
 
         }
         //System.out.println(handler.getMouseManager().getMouseX() + "  " + handler.getMouseManager().getMouseY());

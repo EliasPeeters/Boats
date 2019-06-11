@@ -7,4 +7,8 @@ public class WaterT extends Tile{
     public WaterT(int id) {
         super(Assets.waterT, id);
     }
+    @Override
+    public boolean isSolid() {
+        return true;
+    }
 }
