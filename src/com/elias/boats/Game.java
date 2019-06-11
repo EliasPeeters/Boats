@@ -58,7 +58,7 @@ public class Game implements Runnable {
 
         gamestate = new GameState(handler);
         menuState = new MenuState(handler);
-        State.setState(menuState);
+        State.setState(gamestate);
     }
 
     public void tick() {
