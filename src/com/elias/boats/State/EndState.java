@@ -16,19 +16,11 @@ public class EndState extends State {
         super(handler);
         uiManager = new UIManager(handler);
         handler.getMouseManager().setUiManager(uiManager);
-
-        uiManager.addObject(new UIImageButton(200, 200, 190, 49, Assets.button, new ClickListener() {
-            @Override
-            public void onClick() {
-                handler.getMouseManager().setUiManager(null);
-                State.setState(handler.getGame().getGamestate());
-            }
-        }));
     }
 
     @Override
     public void render(Graphics g) {
-        uiManager.render(g);
+        System.out.println("test");
     }
 
     @Override

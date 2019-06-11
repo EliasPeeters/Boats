@@ -10,7 +10,7 @@ public class Assets {
     private static final int width_world_textures = 64, height_world_textures = 64;
     private static final int width_player = 64, height_player = 64;
 
-    public static BufferedImage sand, playerStanding, uiDisplay, menuBackground;
+    public static BufferedImage sand, playerStanding, uiDisplay, uiDisplaySmall, menuBackground;
     public static BufferedImage[] player_down;
     public static BufferedImage[] player_up;
 
@@ -78,6 +78,7 @@ public class Assets {
         button[0] = ui.crop(380,0, 190, 49);
 
         uiDisplay = ui.crop(0,49, 190, 49);
+        uiDisplaySmall = ui.crop(190, 49, 45, 49);
 
         menuBackground = ImageLoader.loadImage("/textures/menu.png");
     }

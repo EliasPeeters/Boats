@@ -1,6 +1,6 @@
 package com.elias.boats;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.*;
 
 public class Display {
@@ -35,6 +35,10 @@ public class Display {
 
         frame.add(canvas);
         frame.pack();
+
+        frame.getRootPane().setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+                new ImageIcon("res/textures/cursor.png").getImage(),
+                new Point(0,0),"custom cursor"));
     }
 
     public Canvas getCanvas() {
