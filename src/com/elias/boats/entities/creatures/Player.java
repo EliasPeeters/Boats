@@ -83,6 +83,7 @@ public class Player extends Creature{
         return Assets.playerStanding;
     }
 
+
     public int getPoints() {
         return points;
     }
@@ -101,7 +102,7 @@ public class Player extends Creature{
 
     public void incrementPoints() {
         points++;
-        if (points >= 4) {
+        if (points >= 5) {
             State.setState(handler.getGame().getEndState());
         }
     }
