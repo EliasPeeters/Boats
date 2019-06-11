@@ -10,9 +10,13 @@ import com.elias.boats.entities.creatures.Player;
 import com.elias.boats.entities.statics.Harbour;
 import com.elias.boats.graphics.Text;
 import com.elias.boats.tile.Tile;
+import com.oracle.tools.packager.IOUtils;
 
 import java.awt.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class World {
 
@@ -54,7 +58,7 @@ public class World {
     }
 
     private void loadWorld(String path) {
-        String file = Utils.loadFileAsString(path);
+        String file = (new BufferedReader(new InputStreamReader(World.class.getResourceAsStream(path)))).lines().collect(Collectors.joining("\n"));
         String[] tokens = file.split("\\s+");
         width = Utils.parseInt(tokens[0]);
         height = Utils.parseInt(tokens[1]);

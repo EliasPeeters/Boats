@@ -37,7 +37,7 @@ public class Display {
         frame.pack();
 
         frame.getRootPane().setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
-                new ImageIcon("res/textures/cursor.png").getImage(),
+                ImageLoader.loadImage("/textures/cursor.png"),
                 new Point(0,0),"custom cursor"));
     }
 

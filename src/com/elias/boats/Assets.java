@@ -4,6 +4,8 @@ import com.elias.boats.graphics.FontLoader;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.File;
+import java.net.URISyntaxException;
 
 public class Assets {
     private static final int width = 16, height = 16;
@@ -22,7 +24,6 @@ public class Assets {
 
 
     public static void init() {
-        font28 = FontLoader.loadFont("res/fonts/AXTON.otf", 28);
 
         SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/textures.png"));
         SpriteSheet ui = new SpriteSheet(ImageLoader.loadImage("/textures/UI.png"));
@@ -30,6 +31,7 @@ public class Assets {
         SpriteSheet playersheet = new SpriteSheet(ImageLoader.loadImage("/textures/player_sheet.png"));
         SpriteSheet world_textures = new SpriteSheet(ImageLoader.loadImage("/textures/world_textures.png"));
 
+        font28 = FontLoader.loadFont("/fonts/AXTON.otf", 28);
 
         sand = sheet.crop(width,0, width, height);
 
