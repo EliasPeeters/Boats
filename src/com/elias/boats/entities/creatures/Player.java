@@ -36,7 +36,7 @@ public class Player extends Creature{
         if (timerRunning) {
             timeNeeded++;
         }
-        System.out.println(timeNeeded / 60);
+        //System.out.println(timeNeeded / 60);
 
         //Animations
         aniDown.tick();
@@ -84,6 +84,10 @@ public class Player extends Creature{
 
     public int getPoints() {
         return points;
+    }
+
+    public int getTimeNeeded() {
+        return timeNeeded / 60;
     }
 
     public void setTimerRunning(boolean timerRunning) {

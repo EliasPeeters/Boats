@@ -1,11 +1,14 @@
 package com.elias.boats.worlds;
 
+import com.elias.boats.Assets;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
+import com.elias.boats.ImageLoader;
 import com.elias.boats.Utils.Utils;
 import com.elias.boats.entities.EntityManager;
 import com.elias.boats.entities.creatures.Player;
 import com.elias.boats.entities.statics.Harbour;
+import com.elias.boats.graphics.Text;
 import com.elias.boats.tile.Tile;
 
 import java.awt.*;
@@ -87,6 +90,24 @@ public class World {
             }
         }
         entityManager.render(g);
+        renderUI(g);
+
+    }
+
+    public void renderUI(Graphics g) {
+        int displayCenter = handler.getWidth() / 2;
+        g.drawImage(Assets.uiDisplay, displayCenter - 220, handler.getHeight() - 70, 190, 50, null);
+        g.drawImage(Assets.uiDisplay, displayCenter + 30, handler.getHeight() - 70, 190, 50, null);
+
+        //Print Time
+        Text.drawString(g, "Time: " , displayCenter - 170, handler.getHeight() - 37, true, Color.black, Assets.font28);
+        Text.drawString(g, " " + handler.getWorld().getPlayer().getTimeNeeded() + "s", displayCenter - 100, handler.getHeight() - 37, false, Color.black, Assets.font28);
+
+        //Print Points
+        Text.drawString(g, "Points: " , displayCenter + 90, handler.getHeight() - 37, true, Color.black, Assets.font28);
+        Text.drawString(g, " " + handler.getWorld().getPlayer().getPoints(), displayCenter + 150, handler.getHeight() - 37, true, Color.black, Assets.font28);
+
+
     }
 
     public int getWidth() {

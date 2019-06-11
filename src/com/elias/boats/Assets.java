@@ -1,5 +1,8 @@
 package com.elias.boats;
 
+import com.elias.boats.graphics.FontLoader;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 public class Assets {
@@ -7,9 +10,11 @@ public class Assets {
     private static final int width_world_textures = 64, height_world_textures = 64;
     private static final int width_player = 64, height_player = 64;
 
-    public static BufferedImage sand, playerStanding;
+    public static BufferedImage sand, playerStanding, uiDisplay;
     public static BufferedImage[] player_down;
     public static BufferedImage[] player_up;
+
+    public static Font font28;
 
     public static BufferedImage[] button;
 
@@ -17,6 +22,8 @@ public class Assets {
 
 
     public static void init() {
+        font28 = FontLoader.loadFont("res/fonts/AXTON.otf", 28);
+
         SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/textures.png"));
         SpriteSheet ui = new SpriteSheet(ImageLoader.loadImage("/textures/UI.png"));
 
@@ -69,5 +76,7 @@ public class Assets {
         button[2] = ui.crop(0,0, 190, 49);
         button[1] = ui.crop(190,0, 190, 49);
         button[0] = ui.crop(380,0, 190, 49);
+
+        uiDisplay = ui.crop(0,49, 190, 49);
     }
 }
