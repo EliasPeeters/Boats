@@ -29,6 +29,9 @@ public abstract class Entity {
                 continue;
             }
             if (e.getCollisionBounds(0f, 0f).intersects(getCollisionBounds(xOffset, yOffset))) {
+                handler.getWorld().getPlayer().incrementPoints();
+                handler.getWorld().getEntityManager().removeEntity(e);
+                System.out.println(handler.getWorld().getPlayer().getPoints());
                 return true;
             }
         }

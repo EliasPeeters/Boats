@@ -13,6 +13,9 @@ public class Player extends Creature{
 
     //Animations
     private Animation aniDown,animUp;
+    private int points = 0;
+    private int timeNeeded = 0;
+    private boolean timerRunning = false;
 
     public Player(Handler handler, float x, float y) {
 
@@ -30,6 +33,11 @@ public class Player extends Creature{
 
     @Override
     public void tick() {
+        if (timerRunning) {
+            timeNeeded++;
+        }
+        System.out.println(timeNeeded / 60);
+
         //Animations
         aniDown.tick();
 
@@ -37,6 +45,7 @@ public class Player extends Creature{
         getInput();
         move();
         handler.getGameCamera().centerOnEntity(this);
+        //System.out.println(points);
     }
 
     private void getInput() {
@@ -73,5 +82,19 @@ public class Player extends Creature{
         return Assets.playerStanding;
     }
 
+    public int getPoints() {
+        return points;
+    }
 
+    public void setTimerRunning(boolean timerRunning) {
+        this.timerRunning = timerRunning;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public void incrementPoints() {
+        points++;
+    }
 }

@@ -11,12 +11,14 @@ public class Assets {
     public static BufferedImage[] player_down;
     public static BufferedImage[] player_up;
 
+    public static BufferedImage[] button;
 
     public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, harbour, waterT, waterB, waterCTL, waterCTR, waterCBL, waterCBR, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB;
 
 
     public static void init() {
         SpriteSheet sheet = new SpriteSheet(ImageLoader.loadImage("/textures/textures.png"));
+        SpriteSheet ui = new SpriteSheet(ImageLoader.loadImage("/textures/UI.png"));
 
         SpriteSheet playersheet = new SpriteSheet(ImageLoader.loadImage("/textures/player_sheet.png"));
         SpriteSheet world_textures = new SpriteSheet(ImageLoader.loadImage("/textures/world_textures.png"));
@@ -63,6 +65,9 @@ public class Assets {
         player_up[0] = playersheet.crop(2 * width_player,0, width_player, height_player);
         player_up[1] = playersheet.crop(3 * width_player,0, width_player, height_player);
 
-
+        button = new BufferedImage[3];
+        button[2] = ui.crop(0,0, 190, 49);
+        button[1] = ui.crop(190,0, 190, 49);
+        button[0] = ui.crop(380,0, 190, 49);
     }
 }

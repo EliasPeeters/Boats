@@ -9,11 +9,10 @@ import com.elias.boats.ui.UIManager;
 
 import java.awt.*;
 
-public class MenuState extends State {
-
+public class EndState extends State {
     private UIManager uiManager;
 
-    public MenuState(Handler handler) {
+    public EndState(Handler handler) {
         super(handler);
         uiManager = new UIManager(handler);
         handler.getMouseManager().setUiManager(uiManager);
@@ -23,7 +22,6 @@ public class MenuState extends State {
             public void onClick() {
                 handler.getMouseManager().setUiManager(null);
                 State.setState(handler.getGame().getGamestate());
-                handler.getWorld().getPlayer().setTimerRunning(true);
             }
         }));
     }
