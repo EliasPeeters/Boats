@@ -5,6 +5,7 @@ import com.elias.boats.Assets;
 import com.elias.boats.Game;
 import com.elias.boats.Handler;
 import com.elias.boats.State.State;
+import com.elias.boats.tile.Tile;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -39,10 +40,34 @@ public class Player extends Creature{
         if (timerRunning) {
             timeNeeded++;
         }
+
         //System.out.println(timeNeeded / 60);
+
+        if (
+                handler.getWorld().getTile((int) ((x)/64), (int) ((y)/64)) == Tile.dirtTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtBLTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtBRTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtBTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtCBLTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtCBRTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtCTLTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtCTRTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtLTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtRTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtTLTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtTRTile ||
+                        handler.getWorld().getTile((int) (x/64), (int) (y/64)) == Tile.dirtTTile
+
+        ) {
+            speed = 5;
+        } else {
+            speed = 1;
+        }
+
 
         //Animations
         aniDown.tick();
+        animUp.tick();
 
         //Movement
         getInput();

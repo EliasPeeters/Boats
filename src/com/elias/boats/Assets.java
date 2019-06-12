@@ -18,6 +18,8 @@ public class Assets {
 
     public static Font font28;
 
+    public static BufferedImage hauseBig, hauseGrey, treeGreen, treeDark, treeOrange;
+
     public static BufferedImage[] button, restartButton;
 
     public static BufferedImage stone, dirt, grass, waterTL, waterTR, waterBL, waterBR, water, waterR, waterL, harbour, waterT, waterB, waterCTL, waterCTR, waterCBL, waterCBR, dirtTL, dirtTR, dirtBL, dirtBR, dirtR, dirtL, dirtT, dirtB, bridgeTL, bridgeTR, bridgeBL, bridgeBR, dirtCTL, dirtCTR, dirtCBL, dirtCBR;
@@ -96,5 +98,9 @@ public class Assets {
 
         menuBackground = ImageLoader.loadImage("/textures/menu.png");
         endScreen = ImageLoader.loadImage("/textures/end.png");
+
+        hauseBig = ImageLoader.loadImage("/textures/hausebig.png");
+        hauseGrey = ImageLoader.loadImage("/textures/hauseGrey.png");
+        treeGreen = ImageLoader.loadImage("/textures/treeGreen.png");
     }
 }
