@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="Boats:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/Boats_jar</output-path>
-    <root id="archive" name="Boats_jar.jar">
-      <element id="module-output" name="Boats" />
-      <element id="library" level="project" name="res" />
-    </root>
-  </artifact>
-</component>
