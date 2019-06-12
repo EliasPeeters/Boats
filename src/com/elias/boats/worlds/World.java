@@ -12,7 +12,10 @@ import com.elias.boats.graphics.Text;
 import com.elias.boats.tile.Tile;
 
 import java.awt.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 public class World {
 
@@ -54,7 +57,7 @@ public class World {
     }
 
     private void loadWorld(String path) {
-        String file = Utils.loadFileAsString(path);
+        String file = (new BufferedReader(new InputStreamReader(World.class.getResourceAsStream(path)))).lines().collect(Collectors.joining("\n"));
         String[] tokens = file.split("\\s+");
         width = Utils.parseInt(tokens[0]);
         height = Utils.parseInt(tokens[1]);
@@ -119,7 +122,7 @@ public class World {
 
         //Print Points
         Text.drawString(g, "Points: " , displayCenter + 90, handler.getHeight() - 37, true, Color.black, Assets.font28);
-        Text.drawString(g, " " + handler.getWorld().getPlayer().getPoints(), displayCenter + 150, handler.getHeight() - 37, true, Color.black, Assets.font28);
+        Text.drawString(g, " " + handler.getWorld().getPlayer().getPoints() + "/5", displayCenter + 150, handler.getHeight() - 37, true, Color.black, Assets.font28);
 
         Text.drawString(g, "" + handler.getGame().getFramesPerSecond() , handler.getWidth() - 32, 43, true, Color.black, Assets.font28);
     }
